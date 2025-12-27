@@ -4,6 +4,7 @@ import time
 st.set_page_config(page_title="番茄鐘 25 分", layout="centered")
 st.title("番茄鐘（25 分）")
 st.caption("開始 → 倒數 25:00；可暫停或重置。")
+https://www.youtube.com/embed?listType=playlist&list=OLAK5uy_kZnXbea4f7XrKfUq1Ibwa11JrqFa7BfJU%22
 #狀態初始化
 DEFAULT_SECONDS = 25 * 60
 if "remaining" not in st.session_state:
@@ -32,6 +33,7 @@ if st.session_state.running and st.session_state.remaining > 0:
     if elapsed >= 1:
         st.session_state.remaining = max(0, st.session_state.remaining - elapsed)
         st.session_state.last_tick = now
+if st.session_state.running and st.session_state.remaining > 0: st.sidebar.video(YT, autoplay=True, muted=False)
 #顯示 mm:ss
 minutes = st.session_state.remaining // 60
 seconds = st.session_state.remaining % 60
