@@ -47,5 +47,4 @@ st.markdown(
 if st.session_state.remaining == 0:
     st.success("時間到！休息一下吧～")
 #自動刷新
-if st.session_state.running and st.session_state.remaining > 0:
-    st.rerun()
+if st.session_state.running and st.session_state.remaining > 0: time.sleep(1); st.rerun()
