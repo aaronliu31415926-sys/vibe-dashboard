@@ -1,6 +1,5 @@
 import streamlit as st
 import time
- 
 # 基本設定（不使用 icon）
 st.set_page_config(page_title="番茄鐘 25 分", layout="centered")
 st.title("番茄鐘（25 分）")
