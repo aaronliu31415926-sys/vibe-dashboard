@@ -16,22 +16,22 @@ if "last_tick" not in st.session_state:
 c1, c2, c3 = st.columns(3)
 with c1:
     if st.button("開始", use_container_width=True):
-        st.session_state.running = True
-        st.session_state.last_tick = time.time()
+        st.session_state.running = True
+        st.session_state.last_tick = time.time()
 with c2:
     if st.button("暫停", use_container_width=True):
-        st.session_state.running = False
+        st.session_state.running = False
 with c3:
     if st.button("重置", use_container_width=True):
-        st.session_state.running = False
-        st.session_state.remaining = DEFAULT_SECONDS
+        st.session_state.running = False
+        st.session_state.remaining = DEFAULT_SECONDS
 #計時邏輯
 if st.session_state.running and st.session_state.remaining > 0:
     now = time.time()
     elapsed = int(now - st.session_state.last_tick)
     if elapsed >= 1:
-        st.session_state.remaining = max(0, st.session_state.remaining - elapsed)
-        st.session_state.last_tick = now
+        st.session_state.remaining = max(0, st.session_state.remaining - elapsed)
+        st.session_state.last_tick = now
 #顯示 mm:ss
 minutes = st.session_state.remaining // 60
 seconds = st.session_state.remaining % 60
