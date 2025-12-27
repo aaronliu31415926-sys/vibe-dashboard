@@ -4,7 +4,7 @@ import time
 st.set_page_config(page_title="番茄鐘 25 分", layout="centered")
 st.title("番茄鐘（25 分）")
 st.caption("開始 → 倒數 25:00；可暫停或重置。")
-https://www.youtube.com/embed?listType=playlist&list=OLAK5uy_kZnXbea4f7XrKfUq1Ibwa11JrqFa7BfJU%22
+YT = "https://www.youtube.com/embed?listType=playlist&list=OLAK5uy_kZnXbea4f7XrKfUq1Ibwa11JrqFa7BfJU"
 #狀態初始化
 DEFAULT_SECONDS = 25 * 60
 if "remaining" not in st.session_state:
